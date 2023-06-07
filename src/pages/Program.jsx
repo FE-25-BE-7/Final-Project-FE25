@@ -1,5 +1,6 @@
 import React from "react";
 import { IoChevronForward, IoCalendar, IoPerson } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import "./pages.css";
 
 export const Program = () => {
@@ -40,10 +41,10 @@ export const Program = () => {
                 <p className="article-text">
                   Di Indonesia dan berbagai belahan dunia, kelas pekerja terlibat dalam perjuangan lingkungan hidup dan keadilan iklim. Tujuannya ialah bergerak ke ekonomi...
                 </p>
-                <a href="program-1.html" className="article-link-btn">
+                <Link to={"./program"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -65,10 +66,10 @@ export const Program = () => {
                 <p className="article-text">
                   Polusi udara berisiko besar terhadap kesehatan. Sayangnya, pemerintah tampaknya masih abai terhadap hak rakyat atas udara bersih...
                 </p>
-                <a href="program-1.html" className="article-link-btn" id="link">
+                <Link to={"./program"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -90,10 +91,10 @@ export const Program = () => {
                 <p className="article-text">
                   Peran Indonesia sebagai negara kepulauan terbesar di dunia sangat vital dalam upaya mewujudkan target 30x30 ini. Dan tahun 2030 tinggal tujuh tahun lagi...
                 </p>
-                <a href="program-1.html" className="article-link-btn">
+                <Link to={"./program"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -115,10 +116,10 @@ export const Program = () => {
                 <p className="article-text">
                   Transportasi umum adalah kebutuhan dasar  masyarakat dan diwujudkan oleh pemerintah dari hasil memungut pajak masyarakatnya...
                 </p>
-                <a href="program-1.html" className="article-link-btn">
+                <Link to={"./program"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -140,10 +141,10 @@ export const Program = () => {
                 <p className="article-text">
                   Kenaikan suhu Bumi bisa menuju angka 2.8°C pada 2100, melebihi batas aman pemanasan global. Aksi iklim yang ambisius dibutuhkan sekarang juga...
                 </p>
-                <a href="program-1.html" className="article-link-btn" id="link">
+                <Link to={"./program"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -165,10 +166,10 @@ export const Program = () => {
                 <p className="article-text">
                   Greenpeace berkolaborasi dengan Papua Itu Kita–forum solidaritas Papua yang berfokus pada HAM serta pusat informasi dan kajian–menggelar Festival...
                 </p>
-                <a href="program-1.html" className="article-link-btn">
+                <Link to={"./program"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
           </ul>

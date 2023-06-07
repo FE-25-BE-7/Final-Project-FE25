@@ -1,6 +1,6 @@
 import React from "react";
 import { IoChevronForward, IoCalendar, IoPerson } from "react-icons/io5";
-// import { FaAndroid,  } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import "./pages.css";
 
 export const Home = () => {
@@ -16,7 +16,7 @@ export const Home = () => {
             <p className="hero-text" id="description">
               Greenpeace hadir karena bumi yang rapuh ini perlu suara. Butuh solusi. Butuh perubahan. Butuh aksi. 
             </p>
-            <a href="login.html" className="btn btn-primary">Gabung Sekarang</a>
+            <Link to={"./login"} className="btn btn-primary">Gabung Sekarang</Link>
           </div>
           <figure className="hero-banner">
             <img src="https://i.ibb.co/NSZ8PTq/scouts.png" alt="hero banner"/>
@@ -47,10 +47,10 @@ export const Home = () => {
                 <p className="article-text">
                   Transportasi umum adalah kebutuhan dasar  masyarakat dan diwujudkan oleh pemerintah dari hasil memungut pajak masyarakatnya...
                 </p>
-                <a href="article-1.html" className="article-link-btn">
+                <Link to={"./artikel"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -72,10 +72,10 @@ export const Home = () => {
                 <p className="article-text">
                   Kenaikan suhu Bumi bisa menuju angka 2.8°C pada 2100, melebihi batas aman pemanasan global. Aksi iklim yang ambisius dibutuhkan sekarang juga...
                 </p>
-                <a href="article-1.html" className="article-link-btn" id="link">
+                <Link to={"./artikel"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -97,10 +97,10 @@ export const Home = () => {
                 <p className="article-text">
                   Jakarta, 17 Maret 2023. Greenpeace berkolaborasi dengan Papua Itu Kita–forum solidaritas Papua yang berfokus pada HAM serta pusat informasi...
                 </p>
-                <a href="article-1.html" className="article-link-btn">
+                <Link to={"./artikel"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
           </ul>
@@ -123,10 +123,10 @@ export const Home = () => {
                 <p className="card-text">
                 Mari membela lingkungan sepanjang hidupmu, bahkan lebih lama dari itu. Berdonasilah hari ini.  
                 </p>
-                <a href="donation.html" className="card-link">
+                <Link to={"./donasi"} className="card-link">
                   <span>Donasi Sekarang</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -138,10 +138,10 @@ export const Home = () => {
                 <p className="card-text">
                   Bumi kita membutuhkan suara dan aksimu untuk mencari solusi membuat perubahan nyata.
                 </p>
-                <a href="program.html" className="card-link">
+                <Link to={"./program"} className="card-link">
                   <span>Gabung Sekarang</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
           </ul>
@@ -159,7 +159,7 @@ export const Home = () => {
             <p className="hero-text">
               Greenpeace adalah organisasi kampanye independen, yang menggunakan konfrontasi kreatif dan damai untuk mengungkap masalah lingkungan global, dan mengembangkan solusi untuk masa depan yang hijau dan damai.
             </p>
-            <a href="about.html" className="btn btn-primary" >Selengkapnya</a>
+            <Link to={"./about"} className="btn btn-primary">Selengkapnya</Link>
           </div>
         </div>
       </section>

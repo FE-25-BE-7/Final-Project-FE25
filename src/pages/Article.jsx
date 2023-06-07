@@ -1,5 +1,6 @@
 import React from "react";
 import { IoChevronForward, IoCalendar, IoPerson } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import "./pages.css";
 
 export const Article = () => {
@@ -18,7 +19,7 @@ export const Article = () => {
     </section>
 
       <article className="article" id="article">
-        <div className="container">
+      <div className="container">
           <ul className="article-list">
             <li>
               <div className="article-card">
@@ -39,10 +40,10 @@ export const Article = () => {
                 <p className="article-text">
                   Transportasi umum adalah kebutuhan dasar  masyarakat dan diwujudkan oleh pemerintah dari hasil memungut pajak masyarakatnya...
                 </p>
-                <a href="article-1.html" className="article-link-btn">
+                <Link to={"./artikel"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -64,10 +65,10 @@ export const Article = () => {
                 <p className="article-text">
                   Kenaikan suhu Bumi bisa menuju angka 2.8°C pada 2100, melebihi batas aman pemanasan global. Aksi iklim yang ambisius dibutuhkan sekarang juga...
                 </p>
-                <a href="article-1.html" className="article-link-btn" id="link">
+                <Link to={"./artikel"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -78,7 +79,7 @@ export const Article = () => {
                 <div className="article-meta">
                   <span>
                     <IoCalendar />
-                    <time datetime="2023-03-17">17 March 2023</time>
+                    <time datetime="2023-03-17">17 Maret 2023</time>
                   </span>
                   <span>
                     <IoPerson />
@@ -89,10 +90,10 @@ export const Article = () => {
                 <p className="article-text">
                   Jakarta, 17 Maret 2023. Greenpeace berkolaborasi dengan Papua Itu Kita–forum solidaritas Papua yang berfokus pada HAM serta pusat informasi...
                 </p>
-                <a href="article-1.html" className="article-link-btn">
+                <Link to={"./artikel"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -114,10 +115,10 @@ export const Article = () => {
                 <p className="article-text">
                   Di Indonesia dan berbagai belahan dunia, kelas pekerja terlibat dalam perjuangan lingkungan hidup dan keadilan iklim. Tujuannya ialah bergerak ke ekonomi...
                 </p>
-                <a href="article-1.html" className="article-link-btn">
+                <Link to={"./artikel"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -128,7 +129,7 @@ export const Article = () => {
                 <div className="article-meta">
                   <span>
                     <IoCalendar />
-                    <time datetime="2023-03-22">`12 Maret 2023</time>
+                    <time datetime="2023-03-22">12 Maret 2023</time>
                   </span>
                   <span>
                     <IoPerson />
@@ -139,10 +140,10 @@ export const Article = () => {
                 <p className="article-text">
                   Polusi udara berisiko besar terhadap kesehatan. Sayangnya, pemerintah tampaknya masih abai terhadap hak rakyat atas udara bersih...
                 </p>
-                <a href="article-1.html" className="article-link-btn" id="link">
+                <Link to={"./artikel"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -164,10 +165,10 @@ export const Article = () => {
                 <p className="article-text">
                   Peran Indonesia sebagai negara kepulauan terbesar di dunia sangat vital dalam upaya mewujudkan target 30x30 ini. Dan tahun 2030 tinggal tujuh tahun lagi...
                 </p>
-                <a href="article-1.html" className="article-link-btn">
+                <Link to={"./artikel"} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
           </ul>

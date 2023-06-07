@@ -1,6 +1,5 @@
 import React from "react";
-import {  } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./pages.css";
 
 export const Register = () => {
@@ -22,7 +21,7 @@ export const Register = () => {
               <input type="submit" className="btn btn-primary reg" value="Sign Up" />
           </form>
           <h5 className="section-text">Sudah mempunyai akun? 
-          <NavLink to={"./login"}>Login</NavLink> 
+          <Link to={"./login"}>Login</Link> 
           </h5>
         </div>
     </section>
