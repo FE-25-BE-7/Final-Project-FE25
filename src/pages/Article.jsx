@@ -18,12 +18,12 @@ export const Article = () => {
         </section>
   
         <article className="article" id="article">
-          <div className="container">
+          {/* <div className="container"> */}
             <ItemsList apiUrl={apiUrl} />
             {/* <div className="article-button">
             <a href="article.html" className="btn btn-primary" >Read More</a>
             </div> */}
-          </div>
+          {/* </div> */}
         </article>
       </main>
     </body>

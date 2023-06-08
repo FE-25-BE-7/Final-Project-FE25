@@ -4,6 +4,7 @@ import ItemsCard from './ItemsCard';
 
 const ItemsList = ({ apiUrl }) => {
   const [articles, setArticles] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -18,11 +19,24 @@ const ItemsList = ({ apiUrl }) => {
     fetchArticles();
   }, [apiUrl]);
 
+  const handleSearch = e => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredArticles = articles.filter(article =>
+    article.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div className="article-list">
-        {articles.map(article => (
+    <div className="container">
+      <div className="user-box">
+        <input type="text" placeholder="Cari Artikel" value={searchTerm} onChange={handleSearch} />
+      </div>
+      <div className="article-list">
+        {filteredArticles.map(article => (
           <ItemsCard key={article.id} article={article} />
         ))}
+      </div>
     </div>
   );
 };
