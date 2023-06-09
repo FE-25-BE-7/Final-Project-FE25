@@ -20,7 +20,7 @@ const ItemsCard = ({ article }) => {
         </div>
         <h3 className="article-title">{article.title}</h3>
         <p className="article-text">{article.description}</p>
-        <Link to={"./artikel"} className="article-link-btn">
+        <Link to={`/artikel/${article.id}`} className="article-link-btn">
           <span>Selengkapnya</span>
           <IoChevronForward />
         </Link>

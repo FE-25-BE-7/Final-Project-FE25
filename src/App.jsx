@@ -9,6 +9,7 @@ import { About } from "./pages/About";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import { Donasi } from "./pages/Donasi";
+import ArticleDetail from "./pages/ArticleDetail";
 
 
 
@@ -22,7 +23,10 @@ function App() {
         <div className="pages">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/artikel" element={<Article />} />
+            <Route path="/artikel">
+              <Route index element={<Article />} />
+              <Route path="/artikel/:id" element={<ArticleDetail />} />  
+            </Route>
             <Route path="/program" element={<Program />} />
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />

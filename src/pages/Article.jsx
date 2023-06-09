@@ -3,7 +3,7 @@ import ItemsList from "../components/ItemsList";
 import "./pages.css";
 
 export const Article = () => {
-  const apiUrl = 'https://6454d140f803f34576320f15.mockapi.io/gp/article';
+  // const apiUrl = 'https://6454d140f803f34576320f15.mockapi.io/gp/article';
   return (
     <>
     <body>
@@ -19,7 +19,7 @@ export const Article = () => {
   
         <article className="article" id="article">
           {/* <div className="container"> */}
-            <ItemsList apiUrl={apiUrl} />
+            <ItemsList />
             {/* <div className="article-button">
             <a href="article.html" className="btn btn-primary" >Read More</a>
             </div> */}

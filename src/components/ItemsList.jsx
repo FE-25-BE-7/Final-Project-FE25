@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ItemsCard from './ItemsCard';
 
-const ItemsList = ({ apiUrl }) => {
+const ItemsList = () => {
   const [articles, setArticles] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get(apiUrl);
+        const response = await axios.get('https://6454d140f803f34576320f15.mockapi.io/gp/article');
         setArticles(response.data);
       } catch (error) {
         console.error(error);
@@ -17,7 +17,7 @@ const ItemsList = ({ apiUrl }) => {
     };
 
     fetchArticles();
-  }, [apiUrl]);
+  }, []);
 
   const handleSearch = e => {
     setSearchTerm(e.target.value);
