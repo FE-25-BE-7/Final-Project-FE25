@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import {IoLogoFacebook, IoLogoTwitter, IoLogoWhatsapp} from 'react-icons/io';
+import {FacebookShareButton, TwitterShareButton, WhatsappShareButton}from 'react-share';
 
 const ArticleDetail = () => {
   const { id } = useParams();
@@ -33,6 +35,21 @@ const ArticleDetail = () => {
             <h5 class="penulis">{article.date}</h5>
           </div>
           <div class="share-sosmed">
+            <div id='wa'>
+              <WhatsappShareButton url={'https://www.example.com'} quote={'Dummy text!'} hashtag="#muo" >
+              <IoLogoWhatsapp size={32} round />
+              </WhatsappShareButton>
+            </div>
+            <div id='twt'>
+              <TwitterShareButton url={'https://www.example.com'} quote={'Dummy text!'} hashtag="#muo" >
+              <IoLogoTwitter size={32} round />
+              </TwitterShareButton>
+            </div>
+            <div id='FB'>
+              <FacebookShareButton url={'https://www.example.com'} quote={'Dummy text!'} hashtag="#muo" >
+              <IoLogoFacebook size={32} round />
+              </FacebookShareButton>
+            </div>
             {/* <div id="wa">
               <IoLogoWhatsapp name="logo-whatsapp" size="large" ></IoLogoWhatsapp>
             </div>
