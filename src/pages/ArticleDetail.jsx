@@ -9,7 +9,7 @@ const ArticleDetail = () => {
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        const response = await axios.get(`https://6454d140f803f34576320f15.mockapi.io/gp/article/${id}`);
+        const response = await axios.get(`https://6454d140f803f34576320f15.mockapi.io/gp/detail-article/${id}`);
         setArticle(response.data);
       } catch (error) {
         console.error(error);
