@@ -2,6 +2,9 @@ import React from "react";
 import { IoChevronForward, IoCalendar, IoPerson } from "react-icons/io5";
 import "./pages.css";
 
+import { Link } from "react-router-dom"
+import { DetailProgram } from "./DetailProgram"
+
 export const Program = () => {
   return (
     <>
@@ -40,10 +43,16 @@ export const Program = () => {
                 <p className="article-text">
                   Di Indonesia dan berbagai belahan dunia, kelas pekerja terlibat dalam perjuangan lingkungan hidup dan keadilan iklim. Tujuannya ialah bergerak ke ekonomi...
                 </p>
-                <a href="program-1.html" className="article-link-btn">
+
+                {/* === pindah ke detail artikel */}
+                <div>
+                  <Link to="./detailprogram" component={DetailProgram} className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                  </Link>
+                </div>
+                {/* =============================== */}
+
               </div>
             </li>
             <li>

@@ -22,7 +22,7 @@ export const Register = () => {
               <input type="submit" className="btn btn-primary reg" value="Sign Up" />
           </form>
           <h5 className="section-text">Sudah mempunyai akun? 
-          <NavLink to={"./login"}>Login</NavLink> 
+          <NavLink to={"/login"}>Login</NavLink> 
           </h5>
         </div>
     </section>

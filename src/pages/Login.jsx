@@ -3,6 +3,7 @@ import {  } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import "./pages.css";
 
+
 export const Login = () => {
   return (
     <>
@@ -21,7 +22,7 @@ export const Login = () => {
               </div>
               <input type="submit" className="btn btn-primary" value="Login" />
               <h5 className="section-text">Tidak mempunyai akun? 
-              <NavLink to={"./register"}>Sign Up</NavLink>
+              <NavLink to={"/register"}>Sign Up</NavLink>
               </h5>
           </form>
         </div>

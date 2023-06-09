@@ -2,7 +2,11 @@ import React from "react";
 import { IoChevronForward, IoCalendar, IoPerson } from "react-icons/io5";
 import "./pages.css";
 
+import { Link } from "react-router-dom"
+import { DetailArtikel } from "./DetailArtikel"
+
 export const Article = () => {
+  
   return (
     <>
     <body>
@@ -39,10 +43,17 @@ export const Article = () => {
                 <p className="article-text">
                   Transportasi umum adalah kebutuhan dasar  masyarakat dan diwujudkan oleh pemerintah dari hasil memungut pajak masyarakatnya...
                 </p>
-                <a href="article-1.html" className="article-link-btn">
+
+                {/* === pindah ke detail artikel */}
+                <div>
+                  <Link to="./detailartikel" component= { DetailArtikel } className="article-link-btn">
                   <span>Selengkapnya</span>
                   <IoChevronForward />
-                </a>
+                  </Link>
+                </div>
+                {/* =============================== */}
+                
+
               </div>
             </li>
             <li>

@@ -9,6 +9,8 @@ import { About } from "./pages/About";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import { Donasi } from "./pages/Donasi";
+import { DetailArtikel } from "./pages/DetailArtikel";
+import { DetailProgram } from "./pages/DetailProgram";
 
 
 
@@ -28,6 +30,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/donasi" element={<Donasi />} />
+            <Route path="/artikel/detailartikel" element={<DetailArtikel />} />
+            <Route path="/program/detailprogram" element={<DetailProgram />} />
           </Routes>
         </div>
 
