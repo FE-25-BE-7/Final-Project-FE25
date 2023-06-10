@@ -9,6 +9,7 @@
   --black-3: hsl(245, 16%, 16%);
   --green-1: #169220;
   --green-2: #33b300b9;
+  --green-3: #0c6c14;
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(240, 100%, 99%);
   --white-3: hsl(228, 50%, 96%);
@@ -559,16 +560,18 @@
   height: 200px;
 }
 
-.blog-card .photo {
+.blog-card .meta .photo {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   transition: transform 0.5s;
+}
+
+.meta img{
+  width: 100%;
+  height: 100%;
 }
 
 .blog-card .details,
@@ -658,12 +661,17 @@
   opacity: 0;
   vertical-align: middle;
   transition: margin 0.3s, opacity 0.3s;
+  color: var(--green-3);
+}
+
+.blog-card .description .read-more a:hover {
+  color: var(--green-3);
 }
 
 .blog-card .description .read-more a:hover:after {
   margin-left: 5px;
   opacity: 1;
-  color: var(--green-2);
+  color: var(--green-3);
 }
 
 .blog-card p {
