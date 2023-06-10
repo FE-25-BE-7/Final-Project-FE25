@@ -50,15 +50,6 @@ const ArticleDetail = () => {
               <IoLogoFacebook size={32} round />
               </FacebookShareButton>
             </div>
-            {/* <div id="wa">
-              <IoLogoWhatsapp name="logo-whatsapp" size="large" ></IoLogoWhatsapp>
-            </div>
-            <div id="twt">
-              <IoLogoTwitter name="logo-twitter"size="large" ></IoLogoTwitter>
-            </div>
-            <div id="FB">
-              <IoLogoFacebook name="logo-facebook" size="large"></IoLogoFacebook>
-            </div> */}
           </div>
           <figure class="hero-banner art-img">
             <img src={article.image} alt="Equitable Transportation, Savior(s) of Safe Mobility in Our Society" />
