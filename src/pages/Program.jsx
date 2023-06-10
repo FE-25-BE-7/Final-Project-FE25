@@ -1,7 +1,6 @@
 import React from "react";
-import { IoChevronForward, IoCalendar, IoPerson } from "react-icons/io5";
-import { Link } from "react-router-dom";
 import "./pages.css";
+import ProgramsList from "../components/ProgramList";
 
 export const Program = () => {
   return (
@@ -20,8 +19,8 @@ export const Program = () => {
       </section>
 
       <article className="article" id="article">
-        <div className="container">
-          <div className="blog-card">
+        {/* <div className="container"> */}
+          {/* <div className="blog-card">
             <div className="meta">
               <div className="photo" style={{ backgroundImage: "url('https://i.ibb.co/8P2Hh4y/donation-tree.jpg')"}}></div>
               <ul className="details">
@@ -54,8 +53,9 @@ export const Program = () => {
                 <Link to={"/"}>Daftar Sekarang</Link>
               </p>
             </div>
-          </div>
-        </div>
+          </div> */}
+          <ProgramsList />
+        {/* </div> */}
       </article>
     </body>
     </>
