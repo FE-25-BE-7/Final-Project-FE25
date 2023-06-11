@@ -1,18 +1,12 @@
 import "./App.css"
 import NavBar from "./components/Navbar"
-import Footer from "./components/Footer";
+import Footer from "./components/Footer"
 import { BrowserRouter as Router,  Route, Routes } from "react-router-dom"
-import { Home } from "./pages/Home";
-// import { Article } from "./pages/Article";
-import { Program } from "./pages/Program";
-import { About } from "./pages/About";
-import ProgramDetail from "./pages/ProgramDetail";
-// import { Login } from "./pages/Login";
-// import { Register } from "./pages/Register";
-// import { Donasi } from "./pages/Donasi";
-// import ArticleDetail from "./pages/ArticleDetail";
-
-
+import { Home } from "./pages/Home"
+import { About } from "./pages/About"
+import { Program } from "./pages/Program"
+import { Volunteer } from "./pages/Volunteer"
+import { ProgramDetail } from "./pages/ProgramDetail"
 
 function App() {
   return (
@@ -24,16 +18,10 @@ function App() {
         <div className="pages">
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="/artikel">
-              <Route index element={<Article />} />
-              <Route path="/artikel/:id" element={<ArticleDetail />} />  
-            </Route> */}
             <Route path="/program" element={<Program />} />
             <Route path="/program/:id" element={<ProgramDetail />} />
+            <Route path="/program/2" element={<Volunteer />} />
             <Route path="/about" element={<About />} />
-            {/* <Route path="/login" element={<Login />} /> */}
-            {/* <Route path="/register" element={<Register />} /> */}
-            {/* <Route path="/donasi" element={<Donasi />} /> */}
           </Routes>
         </div>
 
