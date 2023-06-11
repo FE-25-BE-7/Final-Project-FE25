@@ -17,7 +17,7 @@ const ProgramCard = ({ program }) => {
           <h2>{program.sub_title}</h2>
           <p>{program.description}</p>
           <p className='read-more'>
-            <Link to={`/programs/${program.id}`}>{program.link_name}</Link>
+            <Link to={`/program/${program.id}`}>{program.link_name}</Link>
           </p>
         </div>
       </div>

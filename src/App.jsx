@@ -6,6 +6,7 @@ import { Home } from "./pages/Home";
 // import { Article } from "./pages/Article";
 import { Program } from "./pages/Program";
 import { About } from "./pages/About";
+import ProgramDetail from "./pages/ProgramDetail";
 // import { Login } from "./pages/Login";
 // import { Register } from "./pages/Register";
 // import { Donasi } from "./pages/Donasi";
@@ -28,6 +29,7 @@ function App() {
               <Route path="/artikel/:id" element={<ArticleDetail />} />  
             </Route> */}
             <Route path="/program" element={<Program />} />
+            <Route path="/program/:id" element={<ProgramDetail />} />
             <Route path="/about" element={<About />} />
             {/* <Route path="/login" element={<Login />} /> */}
             {/* <Route path="/register" element={<Register />} /> */}
