@@ -3,7 +3,6 @@ import ItemsList from "../components/ItemsList";
 import "./pages.css";
 
 export const Article = () => {
-  // const apiUrl = 'https://6454d140f803f34576320f15.mockapi.io/gp/article';
   return (
     <>
     <body>

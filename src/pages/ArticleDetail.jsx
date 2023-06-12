@@ -59,7 +59,7 @@ const ArticleDetail = () => {
             <br />
             <p>{article.two}</p>
             <br />
-            <p><i>{article.three}</i></p>
+            <p>{article.three}</p>
             <br />
             <p>{article.four}</p>
             <br />
