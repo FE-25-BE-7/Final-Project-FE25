@@ -1,37 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import React from "react";
+import VolunteerList from "../components/VolunteerList";
+import "./pages.css";
 
-const ProgramDetail = () => {
-  const { id } = useParams();
-  const [program, setProgram] = useState(null);
-
-  useEffect(() => {
-    const fetchProgram = async () => {
-      try {
-        const response = await axios.get(`https://648413ddee799e321626422f.mockapi.io/ProgramList/${id}`);
-        setProgram(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchProgram();
-  }, [id]);
-
-  if (!program) {
-    return <div>Loading...</div>;
-  }
-
+export const ProgramDetail = () => {
   return (
-    <section class="section article-detail">
-      <div class="container">
-          <h2 class="program-title">{program.title}</h2>
-          <h2 class="program-sub">{program.sub_title}</h2>
-          <h2 class="program-text">{program.description}</h2>
-      </div>
-    </section>
+    <>
+    <body>
+      <main>
+        <section className="section banner" id="banner">
+          <div className="container">
+            <div className="banner-content">
+              <h2 className="h1 section-title">RELAWAN</h2>
+            </div>
+          </div>
+        </section>
+  
+        <article className="article" id="article">
+          <VolunteerList />
+        </article>
+      </main>
+    </body>
+    </>
   );
 };
-
-export default ProgramDetail;
