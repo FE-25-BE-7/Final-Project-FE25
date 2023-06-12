@@ -5,7 +5,7 @@ import axios from "axios";
 import "./Donasi.css";
 
 export const Donasi = () => {
-  const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [jml_donasi, setJml_donasi] = useState("");
@@ -30,7 +30,7 @@ export const Donasi = () => {
     e.preventDefault();
 
     const userData = {
-      username: username,
+      name: name,
       email: email,
       phone: phone,
       jml_donasi: jml_donasi,
@@ -42,16 +42,16 @@ export const Donasi = () => {
         userData
       );
 
-      // Logika untuk menangani respon dari API setelah pengiriman data pengguna
+      // menangani respon dari API setelah pengiriman data pengguna
       console.log(response.data);
 
       // Reset form setelah pengiriman data pengguna berhasil
-      setUsername("");
+      setName("");
       setEmail("");
       setPhone("");
       setJml_donasi("");
     } catch (error) {
-      // Logika untuk menangani kesalahan jika terjadi error saat pengiriman data pengguna
+      // menangani kesalahan jika terjadi error saat pengiriman data pengguna
       console.log(error);
     }
   };
@@ -69,11 +69,11 @@ export const Donasi = () => {
                 <div className="input-box">
                   <input
                     type="text"
-                    placeholder="Username"
+                    placeholder=" Masukan Nama"
                     required
                     className="name"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                   <i className="fa fa-user icon"></i>
                 </div>
