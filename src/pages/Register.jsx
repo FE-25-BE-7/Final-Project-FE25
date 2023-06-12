@@ -22,7 +22,7 @@ export const Register = () => {
 
     try {
       // Send a POST request to your backend API to register the user
-      const response = await axios.post('/api/register', { username, password });
+      const response = await axios.post('https://64534e38e9ac46cedf21b9a3.mockapi.io/api/v1/users', { username, password });
       const token = response.data.token; // Assuming the server returns a token
       
       // Store the token in local storage
