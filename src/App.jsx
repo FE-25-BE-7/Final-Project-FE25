@@ -26,6 +26,7 @@ function App() {
               <Route index element={<Article />} />
               <Route path="/artikel/:id" element={<ArticleDetail />} />  
             </Route>
+            <Route path="/program" element={<Program />}/>
             <Route path="/program/:id" element={<ProgramDetail />}/> 
             <Route path="/program/2">
               <Route index element={<ProgramDetail />} />

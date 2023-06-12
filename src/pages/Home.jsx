@@ -1,5 +1,4 @@
 import React from "react";
-import { IoChevronForward, IoCalendar, IoPerson } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
 import "./pages.css";
 import ProgramsListHome from "../components/ProgramListHome";
