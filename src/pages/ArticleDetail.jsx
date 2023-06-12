@@ -72,4 +72,4 @@ const ArticleDetail = () => {
   );
 };
 
-export default ArticleDetail;
+export default ArticleDetail
