@@ -2,6 +2,7 @@ import React from "react";
 import { IoChevronForward, IoCalendar, IoPerson } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
 import "./pages.css";
+import ProgramsListHome from "../components/ProgramListHome";
 import ArticleList from "../components/ItemsListHome";
 
 export const Home = () => {
@@ -38,38 +39,7 @@ export const Home = () => {
       <section className="program" id="program">
         <div className="container">
           <h2 className="h1 section-title">Program Kami</h2>
-          <ul className="program-list">
-            <li>
-              <div className="program-card">
-                <div className="card-icon">
-                  <img src="https://i.ibb.co/hCBYQjC/d1.png" alt="Donation icon" />
-                </div>
-                <h3 className="h3 card-title">Donasi</h3>
-                <p className="card-text">
-                Mari membela lingkungan sepanjang hidupmu, bahkan lebih lama dari itu. Berdonasilah hari ini.  
-                </p>
-                <Link to={"./donasi"} className="card-link">
-                  <span>Donasi Sekarang</span>
-                  <IoChevronForward />
-                </Link>
-              </div>
-            </li>
-            <li>
-              <div className="program-card">
-                <div className="card-icon">
-                  <img src="https://i.ibb.co/GdDvCx5/v1.png" alt="Volunteer icon" />
-                </div>
-                <h3 className="h3 card-title">Relawan</h3>
-                <p className="card-text">
-                  Bumi kita membutuhkan suara dan aksimu untuk mencari solusi membuat perubahan nyata.
-                </p>
-                <Link to={"./program"} className="card-link">
-                  <span>Gabung Sekarang</span>
-                  <IoChevronForward />
-                </Link>
-              </div>
-            </li>
-          </ul>
+          <ProgramsListHome />
         </div>
       </section>
 
