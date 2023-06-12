@@ -1,8 +1,9 @@
 import React from "react";
 import { IoChevronForward, IoCalendar, IoPerson } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./pages.css";
 import ProgramsListHome from "../components/ProgramListHome";
+import ArticleList from "../components/ItemsListHome";
 
 export const Home = () => {
   return (
@@ -28,85 +29,9 @@ export const Home = () => {
       <article className="article" id="article">
         <div className="container">
           <h2 className="h1 section-title">Artikel</h2>
-          <ul className="article-list">
-            <li>
-              <div className="article-card">
-                <figure className="article-banner">
-                  <img src="https://i.ibb.co/zm9PHXx/article2.jpg" alt="Equitable Transportation, Savior(s) of Safe Mobility in Our Society" />
-                </figure>
-                <div className="article-meta">
-                  <span>
-                    <IoCalendar />
-                    <time datetime="2023-03-28">28 Maret 2023</time>
-                  </span>
-                  <span>
-                    <IoPerson />
-                    <p>Wahyudi</p>
-                  </span>
-                </div>
-                <h3 className="article-title">Transportasi Berkeadilan, Juru(s) Selamat Mobilitas Masyarakat Kita</h3>
-                <p className="article-text">
-                  Transportasi umum adalah kebutuhan dasar  masyarakat dan diwujudkan oleh pemerintah dari hasil memungut pajak masyarakatnya...
-                </p>
-                <Link to={"./artikel"} className="article-link-btn">
-                  <span>Selengkapnya</span>
-                  <IoChevronForward />
-                </Link>
-              </div>
-            </li>
-            <li>
-              <div className="article-card">
-                <figure className="article-banner">
-                  <img src="https://i.ibb.co/jzKbkn7/article3.jpg" alt="IPCC Ungkap Krisis Iklim Makin Nyata, Aksi Iklim Ambisius Dibutuhkan Sekarang" />
-                </figure>
-                <div className="article-meta">
-                  <span>
-                    <IoCalendar />
-                    <time datetime="2023-03-22">22 Maret 2023</time>
-                  </span>
-                  <span>
-                    <IoPerson />
-                    <p>Greenpeace</p>
-                  </span>
-                </div>
-                <h3 className="article-title">IPCC Ungkap Krisis Iklim Makin Nyata, Aksi Iklim Ambisius Dibutuhkan Sekarang</h3>
-                <p className="article-text">
-                  Kenaikan suhu Bumi bisa menuju angka 2.8°C pada 2100, melebihi batas aman pemanasan global. Aksi iklim yang ambisius dibutuhkan sekarang juga...
-                </p>
-                <Link to={"./artikel"} className="article-link-btn">
-                  <span>Selengkapnya</span>
-                  <IoChevronForward />
-                </Link>
-              </div>
-            </li>
-            <li>
-              <div className="article-card">
-                <figure className="article-banner">
-                  <img src="https://i.ibb.co/Qbn1hmS/article1.jpg" alt="Papua Clear Voice Festival, Understanding and Voicing Papua Through Arts and Culture" />
-                </figure>
-                <div className="article-meta">
-                  <span>
-                    <IoCalendar />
-                    <time datetime="2023-03-17">17 March 2023</time>
-                  </span>
-                  <span>
-                    <IoPerson />
-                    <p>Ridwan Dimas</p>
-                  </span>
-                </div>
-                <h3 className="article-title">Festival Suara Jernih Papua, Memahami dan Menyuarakan Papua Lewat Seni dan Budaya</h3>
-                <p className="article-text">
-                  Jakarta, 17 Maret 2023. Greenpeace berkolaborasi dengan Papua Itu Kita–forum solidaritas Papua yang berfokus pada HAM serta pusat informasi...
-                </p>
-                <Link to={"./artikel"} className="article-link-btn">
-                  <span>Selengkapnya</span>
-                  <IoChevronForward />
-                </Link>
-              </div>
-            </li>
-          </ul>
+          <ArticleList />
           <div className="article-button">
-            <a href="article.html" className="btn btn-primary" >Baca Lebih Lanjut</a>
+            <NavLink to={"./artikel"} className="btn btn-primary" >Baca Lebih Lanjut</NavLink>
           </div>
         </div>
       </article> 
