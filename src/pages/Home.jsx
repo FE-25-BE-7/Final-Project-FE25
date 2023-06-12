@@ -1,7 +1,8 @@
 import React from "react";
 import { IoChevronForward, IoCalendar, IoPerson } from "react-icons/io5";
-// import { FaAndroid,  } from "react-icons/fa6";
+import { Link, NavLink } from "react-router-dom";
 import "./pages.css";
+
 
 export const Home = () => {
   return (
@@ -16,7 +17,7 @@ export const Home = () => {
             <p className="hero-text" id="description">
               Greenpeace hadir karena bumi yang rapuh ini perlu suara. Butuh solusi. Butuh perubahan. Butuh aksi. 
             </p>
-            <a href="login.html" className="btn btn-primary">Gabung Sekarang</a>
+            <Link to={"./login"} className="btn btn-primary">Gabung Sekarang</Link>
           </div>
           <figure className="hero-banner">
             <img src="https://i.ibb.co/NSZ8PTq/scouts.png" alt="hero banner"/>
@@ -123,10 +124,10 @@ export const Home = () => {
                 <p className="card-text">
                 Mari membela lingkungan sepanjang hidupmu, bahkan lebih lama dari itu. Berdonasilah hari ini.  
                 </p>
-                <a href="donation.html" className="card-link">
+                <Link to={"./donasi"} className="card-link">
                   <span>Donasi Sekarang</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
             <li>
@@ -138,10 +139,10 @@ export const Home = () => {
                 <p className="card-text">
                   Bumi kita membutuhkan suara dan aksimu untuk mencari solusi membuat perubahan nyata.
                 </p>
-                <a href="program.html" className="card-link">
+                <Link to={"./program"} className="card-link">
                   <span>Gabung Sekarang</span>
                   <IoChevronForward />
-                </a>
+                </Link>
               </div>
             </li>
           </ul>
@@ -159,7 +160,7 @@ export const Home = () => {
             <p className="hero-text">
               Greenpeace adalah organisasi kampanye independen, yang menggunakan konfrontasi kreatif dan damai untuk mengungkap masalah lingkungan global, dan mengembangkan solusi untuk masa depan yang hijau dan damai.
             </p>
-            <a href="about.html" className="btn btn-primary" >Selengkapnya</a>
+            <Link to={"./about"} className="btn btn-primary">Selengkapnya</Link>
           </div>
         </div>
       </section>
