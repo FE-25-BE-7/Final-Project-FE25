@@ -8,7 +8,7 @@ export const Donasi = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [jml_donasi, setJml_donasi] = useState("");
+  const [gross_amount, setGross_amount] = useState("");
   const [token, setToken] = useState("");
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export const Donasi = () => {
       name: name,
       email: email,
       phone: phone,
-      jml_donasi: jml_donasi,
+      gross_amount: gross_amount,
     };
 
     try {
@@ -49,7 +49,7 @@ export const Donasi = () => {
       setName("");
       setEmail("");
       setPhone("");
-      setJml_donasi("");
+      setGross_amount("");
     } catch (error) {
       // menangani kesalahan jika terjadi error saat pengiriman data pengguna
       console.log(error);
@@ -114,8 +114,8 @@ export const Donasi = () => {
                     placeholder="Jumlah Donasi"
                     required
                     className="name"
-                    value={jml_donasi}
-                    onChange={(e) => setJml_donasi(e.target.value)}
+                    value={gross_amount}
+                    onChange={(e) => setGross_amount(e.target.value)}
                   />
                   <i className="fas fa-donate icon"></i>
                 </div>
