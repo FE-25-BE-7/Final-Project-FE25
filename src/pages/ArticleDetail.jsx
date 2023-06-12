@@ -52,7 +52,7 @@ const ArticleDetail = () => {
             </div>
           </div>
           <figure class="hero-banner art-img">
-            <img src={article.image} alt="Equitable Transportation, Savior(s) of Safe Mobility in Our Society" />
+            <img src={article.image} />
           </figure>
           <div class="para-artikel">
             <p>{article.one}</p>

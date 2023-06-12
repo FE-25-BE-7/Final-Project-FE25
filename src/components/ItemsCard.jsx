@@ -6,7 +6,7 @@ const ItemsCard = ({ article }) => {
   return (
     <div className="article-card">
         <figure className="article-banner">
-          <img src={article.image} alt="Equitable Transportation, Savior(s) of Safe Mobility in Our Society" />
+          <img src={article.image} />
         </figure>
         <div className="article-meta">
           <span>
