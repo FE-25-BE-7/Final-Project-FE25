@@ -8,7 +8,7 @@ const VolunteerList = () => {
   useEffect(() => {
     const fetchVolunteers = async () => {
       try {
-        const response = await axios.get('https://6454d140f803f34576320f15.mockapi.io/gp/article');
+        const response = await axios.get('https://64512297a3221969115bd221.mockapi.io/relawan');
         setVolunteers(response.data);
       } catch (error) {
         console.error(error);

@@ -523,6 +523,24 @@
 
 .program-card:is(:hover, :focus)::after { width: 100%; }
 
+.program-banner {
+  margin-bottom: 20px;
+  border-radius: 1rem;
+}
+
+.program-banner img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.article-card .program-banner { overflow: hidden; }
+
+.article-card .program-banner img { transition: var(--transition-2); }
+
+.article-card:is(:hover, :focus-within) .program-banner img { transform: scale(1.05); }
+
 #btn_ikutpro {
   /* margin-top: 70px; */
   margin: auto;
