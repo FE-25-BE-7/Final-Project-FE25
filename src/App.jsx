@@ -31,7 +31,7 @@ function App() {
               <Route path="/artikel/:id" element={<ArticleDetail />} />  
             </Route>
             <Route path="/program" element={<Program />}/>
-            <Route path="/program/:id" element={<ProgramDetail />}/> 
+            <Route path="/program/:id" element={<Donasi />}/> 
             <Route path="/program/2">
               <Route index element={<ProgramDetail />} />
               <Route path="/program/2/:id" element={<Volunteer />} />  
