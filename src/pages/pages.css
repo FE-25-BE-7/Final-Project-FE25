@@ -363,6 +363,7 @@
 
 .share-sosmed  #wa:hover,#twt:hover,#FB:hover{
   color: var(--green-1);
+  size: 20px;
 }
 
 .article .section-title { margin-bottom: 80px; }
@@ -1027,6 +1028,8 @@ footer .logo img {
 .donation .section-title{
   font-size: 32px;
 }
+
+
 
 
 /*-----------------------------------*\

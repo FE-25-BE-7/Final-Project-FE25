@@ -9,6 +9,10 @@ import ArticleDetail from "./pages/ArticleDetail"
 import { Program } from "./pages/Program"
 import { ProgramDetail } from "./pages/ProgramDetail"
 import Volunteer from "./pages/Volunteer"
+import { Login } from "./pages/Login";
+import { Register } from "./pages/Register";
+import { Donasi } from "./pages/Donasi";
+
 
 
 
@@ -33,6 +37,9 @@ function App() {
               <Route path="/program/2/:id" element={<Volunteer />} />  
             </Route>
             <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/donasi" element={<Donasi />} />
           </Routes>
         </div>
 
