@@ -1,11 +1,16 @@
-import React,{useState} from "react";
-import {  } from "react-icons/io5";
-import { NavLink, useNavigate} from "react-router-dom";
-import "./pages.css";
-import axios from "axios";
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { NavLink, useNavigate } from 'react-router-dom';
+import './pages.css';
+import axios from 'axios';
+import Swal from "sweetalert2";
+import { login } from '../redux/actions/action';
 
-export const Register = () => {
+const Register = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const loggedIn = useSelector((state) => state.loggedIn);
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -21,11 +26,26 @@ export const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://final-project-be7-production-b776.up.railway.app/api/aut/register', { username, password });
-      console.log(response)
-      if(response.status === 200) {
-        alert('Registered successfully');
-        navigate('/login');
+      const response = await axios.post(
+        'https://final-project-be7-production-b776.up.railway.app/api/aut/register',
+        { username, password }
+      );
+
+      console.log(response);
+      if (response.status === 200) {
+
+        // Dispatch the login action
+        dispatch(login(username));
+        Swal.fire({
+          icon: 'success',
+          title: 'Selamat Anda berhasil Sign Up!',
+          text: 'Silahkan Login!',
+          showConfirmButton: false,
+          timer: 1500
+        }).then(() => {
+          navigate('/login');
+          window.location.reload();
+        });
       }
     } catch (error) {
       console.error(error);
@@ -34,42 +54,44 @@ export const Register = () => {
 
   return (
     <>
-    <body>
-    <section className="section form-con" id="Register">
-        <div className="container form-box">
-
-          <h2 className="section-title">Sign Up</h2>
-          <form id="regis_form" autocomplete="on" onSubmit={handleSubmit}>
+      <body>
+        <section className="section form-con" id="Register">
+          <div className="container form-box">
+            <h2 className="section-title">Sign Up</h2>
+            <form id="regis_form" autoComplete="on" onSubmit={handleSubmit}>
               <div className="user-box">
-                  <input 
-                  id="username" 
-                  name="username" 
-                  required="required" 
-                  type="text" 
+                <input
+                  id="username"
+                  name="username"
+                  required="required"
+                  type="text"
                   value={username}
-                  onChange={handleUsernameChange} 
-                  />
-                  <label for="username">Username</label>
+                  onChange={handleUsernameChange}
+                />
+                <label htmlFor="username">Username</label>
               </div>
               <div className="user-box">
-                  <input 
-                  id="password" 
-                  name="password" 
-                  required="required" 
-                  type="password" 
+                <input
+                  id="password"
+                  name="password"
+                  required="required"
+                  type="password"
                   value={password}
-                  onChange={handlePasswordChange} 
-                  />
-                  <label for="password">Password</label>
+                  onChange={handlePasswordChange}
+                />
+                <label htmlFor="password">Password</label>
               </div>
               <input type="submit" className="btn btn-primary reg" value="Sign Up" />
-          </form>
-          <h5 className="section-text">Sudah mempunyai akun? 
-          <NavLink to={"/login"}>Login</NavLink> 
-          </h5>
-        </div>
-    </section>
-    </body>
+            </form>
+            <h5 className="section-text">
+              Sudah mempunyai akun?
+              <NavLink to={'/login'}> Login</NavLink>
+            </h5>
+          </div>
+        </section>
+      </body>
     </>
   );
 };
+
+export default Register;
