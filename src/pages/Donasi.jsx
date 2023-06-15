@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { FaCreditCard, FaPhoneAlt } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2";
 import "./Donasi.css";
 
 export const Donasi = () => {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -15,7 +17,7 @@ export const Donasi = () => {
     const fetchToken = async () => {
       try {
         const response = await axios.get(
-          "https://64512297a3221969115bd221.mockapi.io/user/token"
+          "https://final-project-be7-production-b776.up.railway.app/api/donasi/charge"
         );
         setToken(response.data.token);
       } catch (error) {
@@ -38,38 +40,60 @@ export const Donasi = () => {
 
     try {
       const response = await axios.post(
-        "https://64512297a3221969115bd221.mockapi.io/user?token=" + token,
+        "https://final-project-be7-production-b776.up.railway.app/api/donasi/charge" + token,
         userData
       );
 
-      // menangani respon dari API setelah pengiriman data pengguna
       console.log(response.data);
+      window.open(response.data.token.redirect_url);
 
-      // Reset form setelah pengiriman data pengguna berhasil
       setName("");
       setEmail("");
       setPhone("");
       setGross_amount("");
+
+      setTimeout(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Donasi Berhasil!",
+          text: "Terima kasih atas donasi Anda. Transaksi telah berhasil dilakukan.",
+          showCancelButton: false,
+          confirmButtonColor: " #7ed321",
+          confirmButtonText: "Tutup",
+          customClass: {
+            confirmButton: "swal-button",
+          },
+        }).then(() => {
+          navigate("/Donasi");
+        });
+      }, 5000); 
+      
     } catch (error) {
-      // menangani kesalahan jika terjadi error saat pengiriman data pengguna
       console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: "Donasi Gagal!",
+        text: "Maaf, terjadi kesalahan dalam transaksi Anda.",
+        confirmButtonText: "OK", 
+        confirmButtonColor: "#ff0000", 
+      });
     }
   };
 
   return (
-    <> 
-    <body> 
-    <section className="section form-con" id="login">
-      <div className="container form-box wrapper">
-        <h2>Form Donasi</h2>
-        <form onSubmit={handleDonasi}>
-          <h4>AKUN</h4>
+    <>
+      <body>
+        <section className="section form-con" id="login">
+          <div className="container form-box wrapper">
+            <h2>Form Donasi</h2>
+            <form onSubmit={handleDonasi}>
+              <h4>AKUN</h4>
 
               <div className="input-group">
                 <div className="input-box">
                   <input
                     type="text"
-                    placeholder=" Masukan Nama"
+                    placeholder="Masukkan Nama"
                     required
                     className="name"
                     value={name}
@@ -83,7 +107,7 @@ export const Donasi = () => {
                 <div className="input-box">
                   <input
                     type="email"
-                    placeholder="Masukan Email"
+                    placeholder="Masukkan Email"
                     required
                     className="name"
                     value={email}
@@ -97,7 +121,7 @@ export const Donasi = () => {
                 <div className="input-box">
                   <input
                     type="tel"
-                    placeholder="Nomer Telepon"
+                    placeholder="Nomor Telepon"
                     required
                     className="name"
                     value={phone}
@@ -126,11 +150,10 @@ export const Donasi = () => {
                   <button type="submit">Donasi Sekarang</button>
                 </div>
               </div>
-        </form>
-      </div>
-    </section>
-    </body>
+            </form>
+          </div>
+        </section>
+      </body>
     </>
   );
 };
-
