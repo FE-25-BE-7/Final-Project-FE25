@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./NavBar.css";
+import Swal from "sweetalert2";
 
 function NavBar() {
   const navigate = useNavigate();
@@ -20,9 +21,15 @@ function NavBar() {
 
   const handleLogout = () => {
     localStorage.clear();
-    alert('Logout successfully');
-    navigate('/');
-    window.location.reload();
+    Swal.fire({
+      icon: 'success',
+      title: 'Selamat Anda berhasil Logout!',
+      showConfirmButton: false,
+      timer: 1000
+    }).then(() => {
+      navigate('/');
+      window.location.reload();
+    });
   };
 
   const handleClick = () => setClick(!click);
@@ -83,7 +90,20 @@ function NavBar() {
                   <span className="btn">Halo, {username}!</span>
                 </li>
                 <li>
-                  <button onClick={handleLogout} className="btn btn-outline">Logout</button>
+                  <button onClick={() =>
+                    Swal.fire({
+                      title: 'Apakah kamu yakin?',
+                      icon: 'warning',
+                      showCancelButton: true,
+                      confirmButtonColor: '#169220',
+                      cancelButtonColor: '#d33',
+                      confirmButtonText: 'Ya, Logout'
+                    }).then((willLogout) => {
+                      if (willLogout) {
+                        handleLogout();
+                      }
+                    })}
+                    className="btn btn-outline">Logout</button>
                 </li>
               </div>
               
