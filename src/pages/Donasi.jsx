@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { FaCreditCard, FaPhoneAlt } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, } from "react-router-dom";
 import axios from "axios";
 import "./Donasi.css";
+
 
 export const Donasi = () => {
   const [name, setName] = useState("");
@@ -15,7 +16,7 @@ export const Donasi = () => {
     const fetchToken = async () => {
       try {
         const response = await axios.get(
-          "https://64512297a3221969115bd221.mockapi.io/user/token"
+          "https://final-project-be7-production-b776.up.railway.app/api/donasi/charge"
         );
         setToken(response.data.token);
       } catch (error) {
@@ -38,20 +39,20 @@ export const Donasi = () => {
 
     try {
       const response = await axios.post(
-        "https://64512297a3221969115bd221.mockapi.io/user?token=" + token,
+        "https://final-project-be7-production-b776.up.railway.app/api/donasi/charge" + token,
         userData
       );
 
-      // menangani respon dari API setelah pengiriman data pengguna
+      // menangani respon dari API 
       console.log(response.data);
+      window.open(response.data.token.redirect_url)
 
-      // Reset form setelah pengiriman data pengguna berhasil
+      // Reset form setelah pengiriman data 
       setName("");
       setEmail("");
       setPhone("");
       setGross_amount("");
     } catch (error) {
-      // menangani kesalahan jika terjadi error saat pengiriman data pengguna
       console.log(error);
     }
   };

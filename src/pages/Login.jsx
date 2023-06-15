@@ -1,11 +1,12 @@
 import React,{useState} from "react";
 import {  } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./pages.css";
 import axios from "axios";
 
 
 export const Login = () => {
+  const navigate = useNavigate();
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -22,14 +23,15 @@ export const Login = () => {
     e.preventDefault();
 
     try {
-      // Send a POST request to your backend API to authenticate the user
-      const response = await axios.post('https://64534e38e9ac46cedf21b9a3.mockapi.io/api/v1/users', { username, password });
-      const token = response.data.token; // Assuming the server returns a token
-
-      // Store the token in local storage
-      localStorage.setItem('token', token);
-
-      // Redirect to the authenticated page or perform any other action
+      
+      const response = await axios.post('https://final-project-be7-production-b776.up.railway.app/api/aut/login', { username, password });
+      const token = response.data.accessToken; 
+      
+      localStorage.setItem('accessToken', token);
+      setUsername('');
+      setPassword('');
+      alert('Login successfully');
+        navigate('/');
       console.log('Login successful');
     } catch (error) {
       console.error(error);
@@ -42,7 +44,7 @@ export const Login = () => {
     <section className="section form-con" id="login">
         <div className="container form-box">
           <h2 className="section-title">Login</h2>
-          <form id="login_form" autocomplete="on">
+          <form id="login_form" autocomplete="on" onSubmit={handleSubmit}>
               <div className="user-box">
                   <input 
                   id="username" 
@@ -65,10 +67,11 @@ export const Login = () => {
                   />
                   <label for="password">Password</label>
               </div>
-              <input type="submit" className="btn btn-primary" value="Login" />
+              <button type="submit" className="btn btn-primary"> login </button>
               <h5 className="section-text">Tidak mempunyai akun? 
               <NavLink to={"/register"}>Sign Up</NavLink>
               </h5>
+
           </form>
         </div>
     </section>
