@@ -44,7 +44,6 @@ const Login = () => {
 
       if (response.status === 200) {
         Swal.fire({
-          position: 'top',
           icon: 'success',
           title: 'Selamat Anda berhasil Login!',
           showConfirmButton: false,
@@ -93,7 +92,7 @@ const Login = () => {
               </button>
               <h5 className="section-text">
                 Tidak mempunyai akun?
-                <NavLink to={'/register'}>Sign Up</NavLink>
+                <NavLink to={'/register'}> Sign Up</NavLink>
               </h5>
             </form>
           </div>

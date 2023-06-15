@@ -37,10 +37,11 @@ const Register = () => {
         // Dispatch the login action
         dispatch(login(username));
         Swal.fire({
-          position: 'top',
           icon: 'success',
           title: 'Selamat Anda berhasil Sign Up!',
+          text: 'Silahkan Login!',
           showConfirmButton: false,
+          timer: 1500
         }).then(() => {
           navigate('/login');
           window.location.reload();
@@ -84,7 +85,7 @@ const Register = () => {
             </form>
             <h5 className="section-text">
               Sudah mempunyai akun?
-              <NavLink to={'/login'}>Login</NavLink>
+              <NavLink to={'/login'}> Login</NavLink>
             </h5>
           </div>
         </section>

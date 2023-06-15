@@ -20,10 +20,8 @@ function App() {
         <div className="pages">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/artikel">
-              <Route index element={<Article />} />
-              <Route path="/artikel/:id" element={<ArticleDetail />} />
-            </Route>
+            <Route path="/artikel" element={<Article/>} />
+            <Route path="/artikel/:id" element={<ArticleDetail />} /> 
             <Route path="/program" element={<Program />}/>
             <Route path="/program/:id" element={<Donasi />}/> 
             <Route path="/program/2" element={<ProgramDetail />} />
