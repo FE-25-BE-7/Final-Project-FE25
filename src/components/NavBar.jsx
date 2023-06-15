@@ -87,7 +87,7 @@ function NavBar() {
               <>
               <div className="nav-btn">
                 <li>
-                  <span className="btn">Halo, {username}!</span>
+                  <span className="user">Halo, {username}!</span>
                 </li>
                 <li>
                   <button onClick={() =>
