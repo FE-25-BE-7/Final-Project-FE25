@@ -8,7 +8,7 @@ const ProgramsListHome = () => {
   useEffect(() => {
     const fetchPrograms = async () => {
       try {
-        const response = await axios.get('https://648413ddee799e321626422f.mockapi.io/ProgramList');
+        const response = await axios.get('https://final-project-be7-production-b776.up.railway.app/api/programslist');
         setPrograms(response.data);
       } catch (error) {
         console.error(error);
@@ -19,11 +19,11 @@ const ProgramsListHome = () => {
   }, []);
 
   return (
-      <div className="program-list">
-        {programs.map((program) => (
-          <ProgramCardHome key={program.id} program={program} />
-        ))}
-      </div>
+    <div className="program-list">
+      {programs.map((program) => (
+        <ProgramCardHome key={program.id} program={program} />
+      ))}
+    </div>
   );
 };
 
