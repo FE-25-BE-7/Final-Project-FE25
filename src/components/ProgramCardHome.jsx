@@ -45,7 +45,7 @@ const ProgramCardHome = ({ program }) => {
             <IoChevronForward />
             </Link>
           ) : (
-            <Link to={`/program`} className="card-link" onClick={handleClick}>
+            <Link to={`/program`} className="card-link" onClick={handleClick} reloadDocument>
             <span>{program.link_name}</span>
             <IoChevronForward />
           </Link>

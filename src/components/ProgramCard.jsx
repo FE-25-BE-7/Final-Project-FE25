@@ -51,7 +51,7 @@ const ProgramCard = ({ program }) => {
           </p>
         ) :(
           <p className='read-more'>
-            <Link to={`/program/${program.id}`} onClick={handleClick}>{program.link_name}</Link>
+            <Link to={`/program/${program.id}`} onClick={handleClick} reloadDocument>{program.link_name}</Link>
           </p>
         )}
       </div>
