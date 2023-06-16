@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  /**
+     * colors
+     */
+  --black-1: hsl(244, 17%, 19%);
+  --black-2: hsl(0, 0%, 0%);
+  --black-3: hsl(245, 16%, 16%);
+  --green-1: #169220;
+  --green-2: #33b300b9;
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(240, 100%, 99%);
+  --white-3: hsl(228, 50%, 96%);
+  --white-opacity: hsla(0, 0%, 100%, 0.5);
+  --independence: hsl(245, 17%, 27%);
+  --gray: hsl(244, 17%, 61%);
+  --lavender-web: hsl(247, 69%, 95%);
+
+  /**
+     * typography
+     */
+
+  --ff-poppins: "Poppins", sans-serif;
+
+  --fs-1: 36px;
+  --fs-2: 28px;
+  --fs-3: 20px;
+  --fs-4: 17px;
+  --fs-5: 16px;
+  --fs-6: 15px;
+  --fs-7: 14px;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /**
+     * transition
+     */
+
+  --transition: 0.25s ease;
+  --transition-1: 0.25s ease-out;
+  --transition-2: 0.35s ease-in-out;
+  --transition-3: 0.5s ease-out;
+
+  /**
+     * spacing
+     */
+
+  --section-padding: 80px;
+  --section-margin: 80px;
+
+  /**
+   * border radius
+   */
+
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-30: 30px;
+}
+
+.navbar {
+  background-color: var(--white-1);
+  box-shadow: 0 1px 2px 1px hsla(0, 0%, 0%, 0.05);
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* font-size: 1.2rem; */
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  transition: 0.5s ease-in-out;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  max-width: 1500px;
+}
+
+.nav-logo {
+  color: var(--green-1);
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  /* flex-grow: 1; */
+}
+
+.nav-logo img{
+  height: 25px;
+  width: 160px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+  /* gap: 20px; */
+  transition: 0.5s ease-in-out;
+  /* flex-grow: 2; */
+}
+
+.nav-links {
+  color: var(--independence);
+  /* text-decoration: none; */
+  padding: 0.5rem 1rem;
+  height: 100%;
+  /* border-bottom: 3px solid transparent; */
+}
+
+:is(.nav-links):is(:hover, :focus) {
+  color: var(--green-1);
+}
+
+.fa-code {
+  margin-left: 1rem;
+}
+
+.nav-item {
+  line-height: 40px;
+  margin-right: 1rem;
+}
+
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  background: var(--green-1);
+}
+
+.nav-item .active {
+  color: var(--green-1);
+  /* border: 1px solid #ffdd40; */
+}
+
+.nav-btn{
+  display: flex;
+  align-items: center;
+  margin-left: 17rem;
+  gap: 10px;
+}
+
+.nav-icon {
+  display: none;
+}
+
+.user {
+  max-width: max-content;
+  font-weight: var(--fw-500);
+  padding: 0px 18px 0px 0px;
+  border-radius: 30px;
+  transition: var(--transition);
+}
+
+.user:is(:hover, :focus) {
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 1230px){
+  .nav-btn{
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1pxsolid #fff;
+    position: absolute;
+    top: 65px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: var(--white-1);
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-item .active {
+    color: var(--green-1);
+    border: none;
+  }
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    gap: 20px;
+  }
+
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 30%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--green-1);
+  }
+}
