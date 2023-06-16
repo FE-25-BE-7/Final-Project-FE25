@@ -40,7 +40,7 @@ const ProgramCardHome = ({ program }) => {
           <h3 className="h3 card-title">{program.title}</h3>
           <p className="card-text">{program.description} </p>
           {!isLoggedIn ? (
-            <Link to={`/login`} className="card-link" onClick={handleClick}>
+            <Link to={`/login`} className="card-link" onClick={handleClick} reloadDocument>
             <span>{program.link_name}</span>
             <IoChevronForward />
             </Link>
