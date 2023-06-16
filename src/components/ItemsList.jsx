@@ -36,7 +36,7 @@ const ItemsList = () => {
   return (
     <div className="container">
       <div className="user-box">
-        <input type="text" placeholder="Cari Artikel" value={searchTerm} onChange={handleSearch} />
+        <input type="text" placeholder="Cari Artikel..." value={searchTerm} onChange={handleSearch} />
       </div>
       <div className="article-list">
         {filteredArticles.map(article => (
