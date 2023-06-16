@@ -8,7 +8,6 @@ const VolunteerCard = ({ volunteer, onSelect, isJoined, onJoin }) => {
   const handleClick = () => {
     setClick(!click);
     Swal.fire({
-        position: 'top-end',
         icon: 'success',
         title: 'Selamat! Kamu berhasil bergabung menjadi relawan!',
         showConfirmButton: false,
