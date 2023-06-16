@@ -1,4 +1,4 @@
-# GreenPeace
+# GreenPeace - Skilvul
 
 ---
 
@@ -48,8 +48,8 @@ Aplikasi ini bertujuan untuk menumbuhkan kesadaran publik terhadap isu krisis ik
 
 6. Link Website :
 
-   --
+   https://greenpeace-fe25-be7.netlify.app/
 
 7. Link Video Recoding Presentation :
 
-   --
+   https://youtu.be/_fMBURkuhBA
