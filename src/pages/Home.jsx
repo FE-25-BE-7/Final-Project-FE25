@@ -53,7 +53,7 @@ export const Home = () => {
             <p className="hero-text">
               Greenpeace adalah organisasi kampanye independen, yang menggunakan konfrontasi kreatif dan damai untuk mengungkap masalah lingkungan global, dan mengembangkan solusi untuk masa depan yang hijau dan damai.
             </p>
-            <Link to={"./about"} className="btn btn-primary">Selengkapnya</Link>
+            <Link to={"./about"} reloadDocument className="btn btn-primary">Selengkapnya</Link>
           </div>
         </div>
       </section>
