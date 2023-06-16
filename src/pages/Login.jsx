@@ -54,7 +54,14 @@ const Login = () => {
         });
       }
     } catch (error) {
-      console.error(error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Login gagal!',
+        showConfirmButton: false,
+        timer: 1500
+      }).then(() => {
+        window.location.reload();
+      });
     }
   };
 

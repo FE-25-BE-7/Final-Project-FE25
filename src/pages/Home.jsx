@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 import "./pages.css";
 import ProgramsListHome from "../components/ProgramListHome";
 import ArticleList from "../components/ItemsListHome";
-import Swal from "sweetalert2";
 
 export const Home = () => {
-  // const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const [click, setClick] = useState(false);
 
   useEffect(() => {
     const storedToken = localStorage.getItem('accessToken');

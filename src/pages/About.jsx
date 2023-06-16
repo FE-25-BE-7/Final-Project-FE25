@@ -9,7 +9,7 @@ export const About = () => {
     <section className="section about" id="about" aria-label="about">
         <div className="container">
           <div className="about-banner img-holder">
-            <img src="src\assets\GP-AU.jpg" width="720" height="960" loading="lazy" alt="about banner" className="img-cover" />
+            <img src="https://i.ibb.co/rbKwhKx/GP-AU.png" width="720" height="960" loading="lazy" alt="about banner" className="img-cover" />
           </div>
           <div className="about-content">
             <h2 className="h2 section-title">Tentang Kami</h2>
