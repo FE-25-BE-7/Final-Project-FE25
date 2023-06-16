@@ -66,6 +66,7 @@ function NavBar() {
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
+                reloadDocument
               >
                 Home
               </NavLink>
@@ -76,6 +77,7 @@ function NavBar() {
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
+                reloadDocument
               >
                 Artikel
               </NavLink>
@@ -86,6 +88,7 @@ function NavBar() {
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
+                reloadDocument
               >
                 Program
               </NavLink>
@@ -96,6 +99,7 @@ function NavBar() {
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
+                reloadDocument
               >
                 Tentang Kami
               </NavLink>
@@ -133,7 +137,7 @@ function NavBar() {
                     <span>DONASI</span>
                   </button>
                 </NavLink>
-                <NavLink to={"/login"}>
+                <NavLink to={"/login"} reloadDocument>
                   <button id="btn-login" className="btn navbar-btn btn-outline">
                     <span>Login</span>
                   </button>
