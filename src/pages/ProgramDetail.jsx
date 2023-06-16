@@ -7,10 +7,10 @@ export const ProgramDetail = () => {
     <>
     <body>
       <main>
-        <section className="section banner" id="banner">
+        <section className="section banner banner-art" id="banner">
           <div className="container">
             <div className="banner-content">
-              <h2 className="h1 section-title">RELAWAN</h2>
+              <h2 className="h1 section-title art">RELAWAN</h2>
             </div>
           </div>
         </section>

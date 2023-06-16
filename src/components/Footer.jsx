@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { IoCallOutline, IoLocationOutline, IoMailOutline, IoLogoFacebook, IoLogoTwitter, IoLogoInstagram } from "react-icons/io5";
 
 function Footer() {
@@ -18,19 +18,19 @@ function Footer() {
                 </p>
                 <ul className="social-list">
                   <li>
-                    <a href="#" className="social-link">
+                    <Link to="#" className="social-link">
                       <IoLogoFacebook />
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="social-link">
+                    <Link to="#" className="social-link">
                       <IoLogoTwitter />
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="social-link">
+                    <Link to="#" className="social-link">
                       <IoLogoInstagram />
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -40,23 +40,23 @@ function Footer() {
                     <p className="footer-item-title">MENU</p>
                   </li>
                   <li>
-                    <NavLink to={"./"}>
-                    <a href="index.html" className="footer-link">Home</a>
+                    <NavLink to={"./"} reloadDocument>
+                    <a className="footer-link">Home</a>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to={"./artikel"}>
-                    <a href="article.html" className="footer-link">Artikel</a>
+                    <NavLink to={"./artikel"} reloadDocument>
+                    <a className="footer-link">Artikel</a>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to={"./program"}>
-                    <a href="program.html" className="footer-link">Program</a>
+                    <NavLink to={"./program"} reloadDocument>
+                    <a className="footer-link">Program</a>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to={"./about"}>
-                    <a href="about.html" className="footer-link">Tentang Kami</a>
+                    <NavLink to={"./about"} reloadDocument>
+                    <a className="footer-link">Tentang Kami</a>
                     </NavLink>
                   </li>
                 </ul>
@@ -66,22 +66,22 @@ function Footer() {
                   </li>
                   <ul className="contact-list">
                     <li>
-                      <a href="#" className="contact-link">
+                      <Link to="#" className="contact-link">
                         <IoLocationOutline />
                         <address>Kecamatan Menteng, Jakarta Pusat</address>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="tel:+62213148521" className="contact-link">
+                      <Link to="tel:+62213148521" className="contact-link">
                         <IoCallOutline />
                         <span>+62213148521</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="mailto:info.id@greenpeace.org" className="contact-link">
+                      <Link to="mailto:info.id@greenpeace.org" className="contact-link">
                         <IoMailOutline />
                         <span>info.id@greenpeace.org</span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </ul>         
@@ -90,7 +90,7 @@ function Footer() {
           </div>
            <div className="footer-bottom">
             <div className="container">
-              <p className="copyright">&copy; 2023 <a href="">Greenpeace</a>. All Right Reserved</p>
+              <p className="copyright">&copy; 2023 <Link to="/" reloadDocument>Greenpeace</Link>. All Right Reserved</p>
             </div>
           </div>
         </footer>

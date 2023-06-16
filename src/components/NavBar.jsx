@@ -33,6 +33,23 @@ function NavBar() {
   };
 
   const handleClick = () => setClick(!click);
+
+  const handleDonasi = () => {
+    setClick(!click);
+    if (isLoggedIn) {
+      navigate('/donasi')
+    } else {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Kamu harus Login terlebih dalulu!',
+        showConfirmButton: false,
+        timer: 1000
+      }).then(() => {
+        navigate('/login');
+        window.location.reload();
+      });
+    }
+  }
   
   return (
     <div>
@@ -49,6 +66,7 @@ function NavBar() {
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
+                reloadDocument
               >
                 Home
               </NavLink>
@@ -59,6 +77,7 @@ function NavBar() {
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
+                reloadDocument
               >
                 Artikel
               </NavLink>
@@ -69,6 +88,7 @@ function NavBar() {
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
+                reloadDocument
               >
                 Program
               </NavLink>
@@ -79,6 +99,7 @@ function NavBar() {
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
+                reloadDocument
               >
                 Tentang Kami
               </NavLink>
@@ -92,7 +113,7 @@ function NavBar() {
                 <li>
                   <button onClick={() =>
                     Swal.fire({
-                      title: 'Apakah kamu yakin?',
+                      title: 'Apakah kamu yakin akan Logout?',
                       icon: 'warning',
                       showCancelButton: true,
                       confirmButtonColor: '#169220',
@@ -111,12 +132,12 @@ function NavBar() {
             ) : (
               <>
               <div className="nav-btn">
-                <NavLink to={"/donasi"}>
+                <NavLink to={"/login"} onClick={handleDonasi}>
                   <button className="btn navbar-btn btn-primary">
                     <span>DONASI</span>
                   </button>
                 </NavLink>
-                <NavLink to={"/login"}>
+                <NavLink to={"/login"} reloadDocument>
                   <button id="btn-login" className="btn navbar-btn btn-outline">
                     <span>Login</span>
                   </button>
