@@ -47,7 +47,7 @@ const Login = () => {
           icon: 'success',
           title: 'Selamat Anda berhasil Login!',
           showConfirmButton: false,
-          timer: 1500
+          timer: 2000
         }).then(() => {
           navigate('/');
           window.location.reload();
@@ -58,7 +58,7 @@ const Login = () => {
         icon: 'error',
         title: 'Login gagal!',
         showConfirmButton: false,
-        timer: 1500
+        timer: 2000
       }).then(() => {
         window.location.reload();
       });

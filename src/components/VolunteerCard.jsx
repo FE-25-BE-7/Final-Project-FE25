@@ -11,7 +11,7 @@ const VolunteerCard = ({ volunteer, onSelect, isJoined, onJoin }) => {
         icon: 'success',
         title: 'Selamat! Kamu berhasil bergabung menjadi relawan!',
         showConfirmButton: false,
-        timer: 1000
+        timer: 2000
       })
     if (!isJoined) {
       onSelect(volunteer);

@@ -25,7 +25,7 @@ const ItemsCard = ({ article }) => {
         icon: 'warning',
         title: 'Kamu harus Login terlebih dalulu!',
         showConfirmButton: false,
-        timer: 1000
+        timer: 2000
       }).then(() => {
         navigate('/login');
         window.location.reload();

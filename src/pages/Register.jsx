@@ -41,7 +41,7 @@ const Register = () => {
           title: 'Selamat Anda berhasil Sign Up!',
           text: 'Silahkan Login!',
           showConfirmButton: false,
-          timer: 1500
+          timer: 2000
         }).then(() => {
           navigate('/login');
           window.location.reload();

@@ -25,7 +25,7 @@ function NavBar() {
       icon: 'success',
       title: 'Selamat Anda berhasil Logout!',
       showConfirmButton: false,
-      timer: 1000
+      timer: 2000
     }).then(() => {
       navigate('/');
       window.location.reload();
@@ -43,7 +43,7 @@ function NavBar() {
         icon: 'warning',
         title: 'Kamu harus Login terlebih dalulu!',
         showConfirmButton: false,
-        timer: 1000
+        timer: 2000
       }).then(() => {
         navigate('/login');
         window.location.reload();
