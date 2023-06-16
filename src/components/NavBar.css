@@ -162,6 +162,18 @@
   display: none;
 }
 
+.user {
+  max-width: max-content;
+  font-weight: var(--fw-500);
+  padding: 0px 18px 0px 0px;
+  border-radius: 30px;
+  transition: var(--transition);
+}
+
+.user:is(:hover, :focus) {
+  transform: translateY(-2px);
+}
+
 @media screen and (max-width: 1230px){
   .nav-btn{
     margin-left: 3rem;
