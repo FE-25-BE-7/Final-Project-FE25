@@ -1,8 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { IoChevronForward, IoCalendar, IoPerson } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 const ItemsCard = ({ article }) => {
+
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [click, setClick] = useState(false);
+
+  useEffect(() => {
+    const storedToken = localStorage.getItem('accessToken');
+    if (storedToken) {
+      setIsLoggedIn(true);
+    }
+  }, [isLoggedIn]);
+
+  const handleClick = () => {
+    setClick(!click);
+    if (isLoggedIn) {
+      navigate('/artikel/${article.id}')
+    } else {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Kamu harus Login terlebih dalulu!',
+        showConfirmButton: false,
+        timer: 1000
+      }).then(() => {
+        navigate('/login');
+        window.location.reload();
+      });
+    }
+  }; 
+
   return (
     <div className="article-card">
         <figure className="article-banner">
@@ -11,7 +41,7 @@ const ItemsCard = ({ article }) => {
         <div className="article-meta">
           <span>
             <IoCalendar />
-            <time datetime={article.date}>{article.date}</time>
+            <div>{article.date}</div>
           </span>
           <span>
             <IoPerson />
@@ -20,10 +50,16 @@ const ItemsCard = ({ article }) => {
         </div>
         <h3 className="article-title">{article.title}</h3>
         <p className="article-text">{article.description}</p>
-        <Link to={`/artikel/${article.id}`} className="article-link-btn">
+        {!isLoggedIn ? (
+          <Link to={`/login`} className="article-link-btn" onClick={handleClick}>
           <span>Selengkapnya</span>
           <IoChevronForward />
         </Link>
+        ) : (
+        <Link to={`/artikel/${article.id}`} className="article-link-btn" onClick={handleClick}>
+          <span>Selengkapnya</span>
+          <IoChevronForward />
+        </Link> )}
     </div>
     
   );

@@ -11,8 +11,8 @@ const ArticleDetail = () => {
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        const response = await axios.get(`https://6454d140f803f34576320f15.mockapi.io/gp/detail-article/${id}`);
-        setArticle(response.data);
+        const response = await axios.get(`https://final-project-be7-production-b776.up.railway.app/api/artikel/${id}`);
+        setArticle(response.data.data[0]);
       } catch (error) {
         console.error(error);
       }
@@ -26,15 +26,15 @@ const ArticleDetail = () => {
   }
 
   return (
-    <section class="section article-detail" id="article">
-      <div class="container">
+    <section className="section article-detail" id="article">
+      <div className="container">
         <br />
-          <h2 class="section-title">{article.title}</h2>
+          <h2 className="section-title">{article.title}</h2>
           <div>
-            <h5 class="penulis">{article.author}</h5>
-            <h5 class="penulis">{article.date}</h5>
+            <h5 className="penulis">{article.author}</h5>
+            <h5 className="penulis">{article.date}</h5>
           </div>
-          <div class="share-sosmed">
+          <div className="share-sosmed">
             <div id='wa'>
               <WhatsappShareButton url={'https://www.example.com'} quote={'Dummy text!'} hashtag="#muo" >
               <IoLogoWhatsapp size={32} round />
@@ -51,10 +51,10 @@ const ArticleDetail = () => {
               </FacebookShareButton>
             </div>
           </div>
-          <figure class="hero-banner art-img">
+          <figure className="hero-banner art-img">
             <img src={article.image} />
           </figure>
-          <div class="para-artikel">
+          <div className="para-artikel">
             <p>{article.one}</p>
             <br />
             <p>{article.two}</p>
@@ -72,4 +72,4 @@ const ArticleDetail = () => {
   );
 };
 
-export default ArticleDetail
+export default ArticleDetail;
