@@ -45,7 +45,7 @@ export const Home = () => {
           <h2 className="h1 section-title">Artikel</h2>
           <ArticleList />
           <div className="article-button">
-            <NavLink to={"./artikel"} className="btn btn-primary" >Baca Lebih Lanjut</NavLink>
+            <NavLink to={"./artikel"} className="btn btn-primary" reloadDocument>Baca Lebih Lanjut</NavLink>
           </div>
         </div>
       </article> 
