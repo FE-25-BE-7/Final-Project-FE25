@@ -4,7 +4,7 @@
 
 ## Final Project - Platform Peduli Krisis Iklim
 
-Aplikasi ini bertujuan untuk menumbuhkan kesadaran publik terhadap isu krisis iklim. Dengan aplikasi ini masyarakat akan lebih mudah mengetahui dan melaporkan informasi tentang krisis iklim. Serta menyediakan platform program volunter dan donasi agar masyarakat dapat secara langsung terlibat dalam peberdayaan alam.
+Aplikasi ini bertujuan untuk menumbuhkan kesadaran publik terhadap isu krisis iklim. Dengan aplikasi ini masyarakat akan lebih mudah mengetahui informasi tentang krisis iklim. Serta menyediakan platform program volunter dan donasi agar masyarakat dapat secara langsung terlibat dalam peberdayaan alam.
 
 ---
 
