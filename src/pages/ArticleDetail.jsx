@@ -36,17 +36,17 @@ const ArticleDetail = () => {
           </div>
           <div className="share-sosmed">
             <div id='wa'>
-              <WhatsappShareButton url={'https://www.example.com'} quote={'Dummy text!'} hashtag="#muo" >
+              <WhatsappShareButton url={'https://www.greenpeace-FE25-BE7.com'} quote={'Share Artikel!'} hashtag="#muo" >
               <IoLogoWhatsapp size={32} round />
               </WhatsappShareButton>
             </div>
             <div id='twt'>
-              <TwitterShareButton url={'https://www.example.com'} quote={'Dummy text!'} hashtag="#muo" >
+              <TwitterShareButton url={'https://www.greenpeace-FE25-BE7.com'} quote={'Share Artikel!'} hashtag="#muo" >
               <IoLogoTwitter size={32} round />
               </TwitterShareButton>
             </div>
             <div id='FB'>
-              <FacebookShareButton url={'https://www.example.com'} quote={'Dummy text!'} hashtag="#muo" >
+              <FacebookShareButton url={'https://www.greenpeace-FE25-BE7.com'} quote={'Share Artikel!'} hashtag="#muo" >
               <IoLogoFacebook size={32} round />
               </FacebookShareButton>
             </div>

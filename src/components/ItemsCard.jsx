@@ -56,7 +56,7 @@ const ItemsCard = ({ article }) => {
           <IoChevronForward />
         </Link>
         ) : (
-        <Link to={`/artikel/${article.id}`} className="article-link-btn" onClick={handleClick}>
+        <Link to={`/artikel/${article.id}`} className="article-link-btn" onClick={handleClick} reloadDocument>
           <span>Selengkapnya</span>
           <IoChevronForward />
         </Link> )}
