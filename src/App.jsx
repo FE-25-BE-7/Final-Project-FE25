@@ -15,7 +15,7 @@ import { Donasi } from "./pages/Donasi";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/" >
         <NavBar />
         <div className="pages">
           <Routes>
