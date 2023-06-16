@@ -8,8 +8,8 @@ const ArticleList = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get('https://6454d140f803f34576320f15.mockapi.io/gp/article');
-        setArticles(response.data);
+        const response = await axios.get('https://final-project-be7-production-b776.up.railway.app/api/artikel');
+        setArticles(response.data.data);
       } catch (error) {
         console.error(error);
       }
